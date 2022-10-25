@@ -62,4 +62,4 @@ wcwidth==0.2.5
 webcolors==1.12
 wincertstore==0.2
 zipp==3.9.0
-opencv-python==4.6.0.66
+opencv-python
