@@ -86,9 +86,9 @@ st.image("TS-Midnights-Logo.PNG", width=200)
 col1, col2= st.columns((2,1))
 
 
-
-with col1:
-    st.image("Moon Stone Blue Vinyl.png",edgecolor="Black", caption="Original Photo", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-
-with col2:
-    st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+with st.container():
+    with col1:
+        st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+with st.container2():
+    with col2:
+        st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
