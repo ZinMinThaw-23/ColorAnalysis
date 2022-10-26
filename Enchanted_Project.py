@@ -1,3 +1,7 @@
+import sys 
+
+sys.path.append('/usr/local/lib/python3.9/site-packages')
+
 import streamlit as st
 import pandas as pd
 from pyecharts.charts import Pie
