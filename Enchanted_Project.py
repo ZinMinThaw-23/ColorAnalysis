@@ -77,7 +77,7 @@ def color_analysis(img):
 modified_image = prep_image(image1)
 color_analysis(modified_image)
 
-st.image(https://github.com/ZinMinThaw-23/ColorAnalysis/blob/main/Midnights-Logo.png, width=100)
+st.image("https://github.com/ZinMinThaw-23/ColorAnalysis/blob/main/Midnights-Logo.png", width=100)
 #st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=240, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 #st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 col1, col2= st.columns((2,1))
