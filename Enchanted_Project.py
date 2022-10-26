@@ -19,6 +19,8 @@ from webcolors import (
     hex_to_rgb,
 )
 
+streamlit config show
+
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
