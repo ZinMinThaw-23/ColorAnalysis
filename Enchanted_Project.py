@@ -67,7 +67,7 @@ def color_analysis(img):
     ordered_colors = [center_colors[i] for i in counts.keys()]
     hex_colors = [rgb_to_hex(ordered_colors[i]) for i in counts.keys()]
     names= [convert_rgb_to_names(ordered_colors[i]) for i in counts.keys()]
-    plt.figure(figsize = (11.25, 11.25))
+    plt.figure(figsize = (11.25, 11.25), edgecolor="Midnight Blue")
     plt.pie(counts.values(), colors = hex_colors,labels=names,autopct='%11.2f%%')
     
     plt.savefig("color_analysis_report.png")
