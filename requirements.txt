@@ -22,8 +22,9 @@ jsonschema==4.16.0
 kiwisolver==1.4.4
 MarkupSafe==2.1.1
 matplotlib==3.6.1
-numpy==1.23.4
-opencv-python==4.6.0.66
+numpy
+opencv-python-headless
+opencv-python
 packaging==21.3
 pandas==1.5.0
 Pillow==9.2.0
@@ -62,4 +63,3 @@ wcwidth==0.2.5
 webcolors==1.12
 wincertstore==0.2
 zipp==3.9.0
-opencv-python
