@@ -77,12 +77,7 @@ def color_analysis(img):
 modified_image = prep_image(image1)
 color_analysis(modified_image)
 
-st.set_page_config(
-    page_title="Ex-stream-ly Cool App",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+st.set_page_config( page_title="Color Analysis with David", page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
 st.image("Midnights-Logo.png", width=200)
 st.image("TS-Midnights-Logo.PNG", width=200)
 #st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=240, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
