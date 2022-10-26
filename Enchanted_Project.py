@@ -87,7 +87,7 @@ st.image("Midnights-Logo.png", width=200)
 st.image("TS-Midnights-Logo.PNG", width=200)
 #st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=240, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 #st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-col1, col2= st.columns((2,1))
+col1, col2= st.columns((1,1))
 
 #local_css("style.css")
 
