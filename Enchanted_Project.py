@@ -19,7 +19,7 @@ from webcolors import (
     hex_to_rgb,
 )
 
-st.set_page_config( page_title="Color Analysis with David",layout="wide", initial_sidebar_state="expanded")
+st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
 st.subheader('Color Analysis with David')
 
 #Read the images and Convert the color to RBG
