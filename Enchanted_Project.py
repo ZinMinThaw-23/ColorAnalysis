@@ -66,7 +66,7 @@ def color_analysis(img):
     ordered_colors = [center_colors[i] for i in counts.keys()]
     hex_colors = [rgb_to_hex(ordered_colors[i]) for i in counts.keys()]
     names= [convert_rgb_to_names(ordered_colors[i]) for i in counts.keys()]
-    plt.figure(figsize = (1, 1), dpi=80)
+    plt.figure(figsize = (1, 1), dpi=1080)
     plt.pie(counts.values(), colors = hex_colors,labels=names,autopct='%11.2f%%')
     
     plt.savefig("color_analysis_report.png")
@@ -86,4 +86,4 @@ with col1:
     st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 
 with col2:
-    st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=1920, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+    st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
