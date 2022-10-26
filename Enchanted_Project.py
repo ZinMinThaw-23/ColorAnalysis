@@ -83,7 +83,7 @@ color_analysis(modified_image)
 col1, col2= st.columns((2,1))
 
 with col1:
-    st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+    st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", height=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 
 with col2:
-    st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+    st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", height=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
