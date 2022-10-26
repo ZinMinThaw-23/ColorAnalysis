@@ -99,4 +99,4 @@ with st.container():
 
 with st.container():
     with col2:
-        st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+        st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
