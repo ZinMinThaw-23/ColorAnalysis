@@ -1,4 +1,8 @@
-body {
-  background-color: #FFFFFF;
+<style>
+div {
+  border: 1px solid black;
+  padding: 25px 50px 75px 100px;
+  background-color: lightblue;
 }
+</style>
 
