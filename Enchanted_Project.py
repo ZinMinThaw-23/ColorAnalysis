@@ -37,18 +37,17 @@ def add_bg_from_url():
 
 add_bg_from_url()   
 
-st.markdown(
-    f"""
-    <style>
-     body {
-            font-family: "Nunito Sans";
-            font-style: italic;
-            src: url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_i9.5fcd9664d81a9a165f87731407d0ab02b09b7f68.woff2?h1=c3RvcmUudGF5bG9yc3dpZnQuY29t&hmac=c9b5f27fe201c4297a21055739e62f03a8950b3d7fee1d57ae3ba74b1718a9ec") format("woff2"), url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_i9.fa515651f44f5c1630007b38221d28f431639457.woff?h1=c3RvcmUudGF5bG9yc3dpZnQuY29t&hmac=fab2a7e024384b870f3c0203457e3f1aa2f3108e689c8a996ceea547863349a3") format("woff");
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+streamlit_style = """
+			<style>
+			@import url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_i9.5fcd9664d81a9a165f87731407d0ab02b09b7f68.woff2?h1=c3RvcmUudGF5bG9yc3dpZnQuY29t&hmac=c9b5f27fe201c4297a21055739e62f03a8950b3d7fee1d57ae3ba74b1718a9ec");
+
+			html, body, [class*="css"]  {
+			font-family: 'Nunito Sans', sans-serif;
+			}
+			</style>
+			"""
+st.markdown(streamlit_style, unsafe_allow_html=True)
+
 st.title('Taylor Swift Midnights Album Vinyl Varients Color Analysis with David')
 
 #Read the images and Convert the color to RBG
