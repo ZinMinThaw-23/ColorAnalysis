@@ -38,6 +38,7 @@ def add_bg_from_url():
 add_bg_from_url()   
 
 st.markdown(
+    f"""
     <style>
      body {
             font-family: neue-haas-grotesk-display;
@@ -47,6 +48,8 @@ st.markdown(
             line-height: 1.65;
         }
     </style>
+    """,
+    unsafe_allow_html=True
 )
 st.title('Taylor Swift Midnights Album Vinyl Varients Color Analysis with David')
 
