@@ -41,7 +41,7 @@ st.markdown(
     f"""
     <style>
      body {
-            font-family: neue-haas-grotesk-display;
+            
             font-weight: 700;
             color: #a89bad;
             background: #525b84;
