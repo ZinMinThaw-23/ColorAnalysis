@@ -30,6 +30,13 @@ def add_bg_from_url():
              background-attachment: fixed;
              background-size: cover
          }}
+         body {
+            font-family: neue-haas-grotesk-display;
+            font-weight: 700;
+            color: #a89bad;
+            background: #525b84;
+            line-height: 1.65;
+        }
          </style>
          """,
          unsafe_allow_html=True
