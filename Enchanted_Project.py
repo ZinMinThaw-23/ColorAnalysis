@@ -19,15 +19,9 @@ from webcolors import (
     hex_to_rgb,
 )
 
-st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
+st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")      
 
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-        
-
-def add_bg_from_url():
-    st.markdown(
+st.markdown(
          f"""
          <style>
          .stApp {{
@@ -38,9 +32,7 @@ def add_bg_from_url():
          unsafe_allow_html=True
      )  
 
-add_bg_from_url()
-
-st.title('Taylor Swift Midnights Album Color Analysis with David')
+st.title('Taylor Swift Midnights Album Vinyl Varients Color Analysis with David')
 
 #Read the images and Convert the color to RBG
 #Read the images using imread method by OpenCV to read the image. And then, we are converting the color format from BGR to RGB using cvtColor
