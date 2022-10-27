@@ -18,13 +18,16 @@ from webcolors import (
     CSS3_HEX_TO_NAMES,
     hex_to_rgb,
 )
+
+st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
+
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
         
 local_css("style.css")
 
-st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
+
 st.subheader('Color Analysis with David')
 
 #Read the images and Convert the color to RBG
