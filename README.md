@@ -1,6 +1,6 @@
 #Taylor Swift Midnight Album Vinyl Vartient Color Analysis with David
 
-The project will identify the color of a vinyl and will display the main colors in a pie chart. 
+The project will identify the color of a vinyl and will display the main colors of the vinyl in a pie chart. 
 The labels of each color from the chart will only describe the closest color since some of the hex colors can't be identify using the webcolors library.
 
 This is a small project which is focus on the deployment of streamlit in a fun way. 
