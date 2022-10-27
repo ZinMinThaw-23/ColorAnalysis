@@ -145,16 +145,16 @@ with st.container():
         st.markdown("""
         <style>
                .css-18e3th9 {
-                    padding-top: 5rem;
-                    padding-bottom: 5rem;
-                    padding-left: 5rem;
-                    padding-right: 5rem;
+                    padding-top: 50rem;
+                    padding-bottom: 50rem;
+                    padding-left: 50rem;
+                    padding-right: 50rem;
                 }
                .css-1d391kg {
-                    padding-top: 3.5rem;
-                    padding-right: 1rem;
-                    padding-bottom: 3.5rem;
-                    padding-left: 1rem;
+                    padding-top: 35rem;
+                    padding-right: 10rem;
+                    padding-bottom: 35rem;
+                    padding-left: 10rem;
                 }
         </style>
         """, unsafe_allow_html=True)
