@@ -21,11 +21,25 @@ from webcolors import (
 
 st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
 
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+#def local_css(file_name):
+    #with open(file_name) as f:
+        #st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
         
-local_css("style.css")
+#local_css("style.css")
+
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-color: lightblue;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url()
 
 
 st.subheader('Color Analysis with David')
