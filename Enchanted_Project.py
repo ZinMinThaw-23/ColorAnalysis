@@ -142,4 +142,20 @@ with st.container():
 
 with st.container():
     with col2:
+        st.markdown("""
+        <style>
+               .css-18e3th9 {
+                    padding-top: 5rem;
+                    padding-bottom: 5rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+               .css-1d391kg {
+                    padding-top: 3.5rem;
+                    padding-right: 1rem;
+                    padding-bottom: 3.5rem;
+                    padding-left: 1rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
         st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
