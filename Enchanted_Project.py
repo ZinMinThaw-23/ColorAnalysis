@@ -43,14 +43,13 @@ streamlit_style = """
 
 			html, body, [class*="css"]  {
 			font-family: 'Nunito Sans', sans-serif;
-			font-size: 50px;
 			color: blue;
 			}
 			</style>
 			"""
 st.markdown(streamlit_style, unsafe_allow_html=True)
 
-st.title('Taylor Swift Midnights Album Vinyl Varients Color Analysis with David')
+st.title('Taylor Swift Midnights Album Vinyl Varients Color Analysis with David', font-size: 50px)
 
 #Read the images and Convert the color to RBG
 #Read the images using imread method by OpenCV to read the image. And then, we are converting the color format from BGR to RGB using cvtColor
