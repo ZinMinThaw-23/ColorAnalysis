@@ -74,13 +74,9 @@ image3 = cv2.imread('Mahogany Vinyl.png')
 image3 = cv2.cvtColor(image3, cv2.COLOR_BGR2RGB)
 plt.imshow(image3)
 
-image4 = cv2.imread('Lavendar Vinyl.png')
+image4 = cv2.imread('Blood Moon Vinyl.png')
 image4 = cv2.cvtColor(image4, cv2.COLOR_BGR2RGB)
 plt.imshow(image4)
-
-image5 = cv2.imread('Blood Moon Vinyl.png')
-image5 = cv2.cvtColor(image5, cv2.COLOR_BGR2RGB)
-plt.imshow(image5)
 
 #Convert RGB Color to Hex Color
 #In this function, we are converting an RGB color into Hex color format. This function will help at the end when visualizing the results of our analysis. Instead of having three different values (red, green, blue), we will have one output: hex value.
@@ -167,21 +163,6 @@ def color_analysis4(img):
     plt.figure(figsize = (11.25, 11.25), edgecolor='Black')
     plt.pie(counts.values(), colors = hex_colors,labels=names,autopct='%11.2f%%')
     plt.savefig("color_analysis_report4.png")
-    print(hex_colors)
-
-#I created another function to generate another pic because I don't know how to save many fig using the savefig command but I still want to show all the pics
-def color_analysis5(img):
-    fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
-    clf = KMeans(n_clusters = 5)
-    color_labels = clf.fit_predict(img)
-    center_colors = clf.cluster_centers_
-    counts = Counter(color_labels)
-    ordered_colors = [center_colors[i] for i in counts.keys()]
-    hex_colors = [rgb_to_hex(ordered_colors[i]) for i in counts.keys()]
-    names= [convert_rgb_to_names(ordered_colors[i]) for i in counts.keys()]
-    plt.figure(figsize = (11.25, 11.25), edgecolor='Black')
-    plt.pie(counts.values(), colors = hex_colors,labels=names,autopct='%11.2f%%')
-    plt.savefig("color_analysis_report5.png")
     print(hex_colors)	
 	
 #Image Color Analyser
@@ -196,9 +177,6 @@ color_analysis3(modified_image3)
 
 modified_image4 = prep_image(image4)
 color_analysis4(modified_image4)
-
-modified_image5 = prep_image(image5)
-color_analysis5(modified_image5)
 
 st.image("Midnights-Logo.png", width=200)
 st.image("TS-Midnights-Logo.PNG", width=200)
@@ -238,19 +216,10 @@ col7, col8= st.columns((1,1))
 
 with st.container():
     with col7:
-        st.image("Lavendar Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+        st.image("Blood Moon Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
         
 with st.container():
     with col8:
         st.image("color_analysis_report4.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 
 	
-col9, col10= st.columns((1,1))
-
-with st.container():
-    with col9:
-        st.image("Blood Moon Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-        
-with st.container():
-    with col10:
-        st.image("color_analysis_report5.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
