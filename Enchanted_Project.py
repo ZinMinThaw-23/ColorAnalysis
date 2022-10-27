@@ -70,6 +70,10 @@ image2 = cv2.imread('Jade Green Vinyl.png')
 image2 = cv2.cvtColor(image2, cv2.COLOR_BGR2RGB)
 plt.imshow(image2)
 
+image3 = cv2.imread('Mahogany Vinyl.png')
+image3 = cv2.cvtColor(image3, cv2.COLOR_BGR2RGB)
+plt.imshow(image3)
+
 #Convert RGB Color to Hex Color
 #In this function, we are converting an RGB color into Hex color format. This function will help at the end when visualizing the results of our analysis. Instead of having three different values (red, green, blue), we will have one output: hex value.
 
@@ -130,6 +134,36 @@ def color_analysis2(img):
     
     plt.savefig("color_analysis_report2.png")
     print(hex_colors)
+
+#I created another function to generate another pic because I don't know how to save many fig using the savefig command but I still want to show all the pics
+def color_analysis2(img):
+    fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
+    clf = KMeans(n_clusters = 5)
+    color_labels = clf.fit_predict(img)
+    center_colors = clf.cluster_centers_
+    counts = Counter(color_labels)
+    ordered_colors = [center_colors[i] for i in counts.keys()]
+    hex_colors = [rgb_to_hex(ordered_colors[i]) for i in counts.keys()]
+    names= [convert_rgb_to_names(ordered_colors[i]) for i in counts.keys()]
+    plt.figure(figsize = (11.25, 11.25), edgecolor='Black')
+    plt.pie(counts.values(), colors = hex_colors,labels=names,autopct='%11.2f%%')
+    plt.savefig("color_analysis_report2.png")
+    print(hex_colors)
+	
+#I created another function to generate another pic because I don't know how to save many fig using the savefig command but I still want to show all the pics
+def color_analysis3(img):
+    fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
+    clf = KMeans(n_clusters = 5)
+    color_labels = clf.fit_predict(img)
+    center_colors = clf.cluster_centers_
+    counts = Counter(color_labels)
+    ordered_colors = [center_colors[i] for i in counts.keys()]
+    hex_colors = [rgb_to_hex(ordered_colors[i]) for i in counts.keys()]
+    names= [convert_rgb_to_names(ordered_colors[i]) for i in counts.keys()]
+    plt.figure(figsize = (11.25, 11.25), edgecolor='Black')
+    plt.pie(counts.values(), colors = hex_colors,labels=names,autopct='%11.2f%%')
+    plt.savefig("color_analysis_report3.png")
+    print(hex_colors)
     
 #Image Color Analyser
 modified_image = prep_image(image1)
@@ -138,6 +172,8 @@ color_analysis(modified_image)
 modified_image2 = prep_image(image2)
 color_analysis2(modified_image2)
 
+modified_image3 = prep_image(image3)
+color_analysis3(modified_image3)
 
 st.image("Midnights-Logo.png", width=200)
 st.image("TS-Midnights-Logo.PNG", width=200)
@@ -159,7 +195,18 @@ with st.container():
     with col3:
         st.image("color_analysis_report2.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
         
-
 with st.container():
     with col4:
         st.image("Jade Green Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+
+	
+col5, col6= st.columns((1,1))
+
+with st.container():
+    with col5:
+        st.image("Mahogany Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+        
+with st.container():
+    with col6:
+        st.image("color_analysis_report3.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+	
