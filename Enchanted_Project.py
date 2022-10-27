@@ -19,7 +19,7 @@ from webcolors import (
     hex_to_rgb,
 )
 
-st.get_option("theme.primaryColor")
+st.get_option("theme.backgroundColor")
 
 def local_css(file_name):
     with open(file_name) as f:
