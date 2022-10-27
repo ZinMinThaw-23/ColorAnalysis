@@ -164,7 +164,7 @@ col1, col2= st.columns((1,1))
 _set_block_container_style()
 with st.container():
     with col1:
-        st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+        st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
         
 
 with st.container():
