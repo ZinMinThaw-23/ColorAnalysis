@@ -39,7 +39,7 @@ add_bg_from_url()
 
 streamlit_style = """
 			<style>
-			@import url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_i9.5fcd9664d81a9a165f87731407d0ab02b09b7f68.woff2?h1=c3RvcmUudGF5bG9yc3dpZnQuY29t&hmac=c9b5f27fe201c4297a21055739e62f03a8950b3d7fee1d57ae3ba74b1718a9ec");
+			@import url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_n7.5bd4fb9346d13afb61b3d78f8a1e9f31b128b3d9.woff2?h1=c3RvcmUudGF5bG9yc3dpZnQuY29t&hmac=60eccdbd2670eec353d0081774bf120b82d525923d9ffdd1d1f37aaf86d8bcb8") format("woff2"), url("https://fonts.shopifycdn.com/nunito_sans/nunitosans_n7.2bcf0f11aa6af91c784a857ef004bcca8c2d324d.woff?h1=c3RvcmUudGF5bG9yc3dpZnQuY29t&hmac=2bc2b91b35c84d85452727bfe0d6cc4ac43bf8978e2a27cfb29c154128a4a4cc") format("woff");
 
 			html, body, [class*="css"]  {
 			font-family: 'Nunito Sans', sans-serif;
