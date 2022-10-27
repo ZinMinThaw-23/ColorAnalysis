@@ -102,7 +102,6 @@ def color_analysis(img):
     plt.savefig("color_analysis_report.png")
     print(hex_colors)
     
-    
 #Image Color Analyser
 modified_image = prep_image(image1)
 color_analysis(modified_image)
