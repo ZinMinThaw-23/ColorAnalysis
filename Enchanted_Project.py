@@ -99,7 +99,6 @@ def convert_rgb_to_names(rgb_tuple):
     distance, index = kdt_db.query(rgb_tuple)
     return f'closest match: {names[index]}'
 
-
 def prep_image(raw_img):
     modified_img = cv2.resize(raw_img, (900, 600), interpolation = cv2.INTER_AREA)
     modified_img = modified_img.reshape(modified_img.shape[0]*modified_img.shape[1], 3)
@@ -119,7 +118,7 @@ def color_analysis(img):
     plt.savefig("color_analysis_report.png")
     print(hex_colors)
 
-#I created another function to generate another pic because I don't know how to save two fig using the savefig command
+#I created another function to generate another pic because I don't know how to save two fig using the savefig command but I still want to show all the pics
 def color_analysis2(img):
     fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
     clf = KMeans(n_clusters = 5)
@@ -182,42 +181,34 @@ st.image("Midnights-Logo.png", width=200)
 st.image("TS-Midnights-Logo.PNG", width=200)
 
 col1, col2= st.columns((1,1))
-
 with st.container():
     with col1:
-        st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-        
+        st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')        
 with st.container():
     with col2:
         st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 	
 col3, col4= st.columns((1,1))
-
 with st.container():
     with col3:
-        st.image("Jade Green Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-        
+        st.image("Jade Green Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')        
 with st.container():
     with col4:
         st.image("color_analysis_report2.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 
 	
 col5, col6= st.columns((1,1))
-
 with st.container():
     with col5:
-        st.image("Mahogany Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-        
+        st.image("Mahogany Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')        
 with st.container():
     with col6:
         st.image("color_analysis_report3.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 	
 col7, col8= st.columns((1,1))
-
 with st.container():
     with col7:
-        st.image("Blood Moon Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-        
+        st.image("Blood Moon Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')       
 with st.container():
     with col8:
         st.image("color_analysis_report4.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
