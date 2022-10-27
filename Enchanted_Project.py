@@ -21,17 +21,21 @@ from webcolors import (
 
 st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")      
 
-st.markdown(
+def add_bg_from_url():
+    st.markdown(
          f"""
          <style>
          .stApp {{
-             primaryColor: white;
-             background-color: #CEA4FF;
+             background-image: url(//cdn.shopify.com/s/files/1/0011/4651/9637/t/220/assets/moonbackground.png?v=7157594…);
+             background-attachment: fixed;
+             background-size: cover
          }}
          </style>
          """,
          unsafe_allow_html=True
-     )  
+     )
+
+add_bg_from_url()   
 
 st.title('Taylor Swift Midnights Album Vinyl Varients Color Analysis with David')
 
