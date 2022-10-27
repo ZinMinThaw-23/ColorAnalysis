@@ -21,11 +21,11 @@ from webcolors import (
 
 st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
 
-#def local_css(file_name):
-    #with open(file_name) as f:
-        #st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
         
-#local_css("style.css")
+local_css("style.css")
 
 def add_bg_from_url():
     st.markdown(
@@ -107,7 +107,7 @@ st.image("TS-Midnights-Logo.PNG", width=200)
 #st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=1080, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
 col1, col2= st.columns((1,1))
 
-#local_css("style.css")
+local_css("style.css")
 
 with st.container():
     with col1:
