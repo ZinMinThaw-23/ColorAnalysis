@@ -43,7 +43,7 @@ streamlit_style = """
 
 			html, body, [class*="css"]  {
 			font-family: 'Nunito Sans', sans-serif;
-			color: 	#191970;
+			color: 	#a1bbc5;
 			}
 			</style>
 			"""
