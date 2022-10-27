@@ -1,7 +1,4 @@
 body {
-  background-color: lightgoldenrodyellow;
+  background-color: lightblue;
 }
 
-div[data-testid="stHorizontalBlock"] > div:first-of-type {
-  border-color: red;
-}
