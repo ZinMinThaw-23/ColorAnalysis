@@ -139,7 +139,7 @@ with st.container():
     with col1:
         st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
         
-local_css("style.css")
+
 with st.container():
     with col2:
         st.image("color_analysis_report.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
