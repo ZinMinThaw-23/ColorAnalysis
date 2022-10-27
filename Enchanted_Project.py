@@ -18,12 +18,11 @@ from webcolors import (
     CSS3_HEX_TO_NAMES,
     hex_to_rgb,
 )
-
-st.get_option("theme.backgroundColor")
-
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+        
+local_css("style.css")
 
 st.set_page_config( page_title="Color Analysis with David",page_icon="🧊",layout="wide", initial_sidebar_state="expanded")
 st.subheader('Color Analysis with David')
@@ -96,8 +95,7 @@ col1, col2= st.columns((1,1))
 with st.container():
     with col1:
         st.image("Moon Stone Blue Vinyl.png", caption="Original Photo", width=720, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
-
-#local_css("style.css")
+        
 
 with st.container():
     with col2:
