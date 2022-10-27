@@ -157,9 +157,9 @@ col3, col4= st.columns((1,1))
 
 with st.container():
     with col3:
-        st.image("Jade Green Vinyl.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+        st.image("color_analysis_report2.png", caption="Original Photo", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
         
 
 with st.container():
     with col4:
-        st.image("color_analysis_report2.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+        st.image("Jade Green Vinyl.png", caption="Color Analysis Pie Chart", width=960, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
